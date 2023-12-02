@@ -30,7 +30,7 @@ class Simulation(object):
         pass
 
     def _simulation_should_continue(self):
-        # This method will return a booleanb indicating if the simulation 
+        # This method will return a boolean indicating if the simulation 
         # should continue. 
         # The simulation should not continue if all of the people are dead, 
         # or if all of the living people have been vaccinated. 
