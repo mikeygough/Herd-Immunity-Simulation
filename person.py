@@ -77,14 +77,9 @@ if __name__ == "__main__":
             survived.append(person)
         else:
             not_survived.append(person)
-
-    # Count the people that survived and did not survive:
-
-    did_survived = len(survived)
-    did_not_survive = len(not_survived)
     
-    print(f"Survival Rate {did_survived / num_people}")
-    print(f"Mortality Rate {did_not_survive / num_people}")
+    print(f"Survival Rate {len(survived) / num_people}")
+    print(f"Mortality Rate {len(not_survived) / num_people}")
     print(f"The theoretical mortality rate is 0.20")
 
     # The results should roughly match the mortality rate of the virus
@@ -92,6 +87,7 @@ if __name__ == "__main__":
     # should succumb.
 
     # Stretch challenge!
+    
     # Check the infection rate of the virus by making a group of
     # unifected people. Loop over all of your people.
     # Generate a random number. If that number is less than the
@@ -99,5 +95,23 @@ if __name__ == "__main__":
     # Assign the virus to that person's infection attribute.
 
     # Now count the infected and uninfect people from this group of people.
-    # The number of infectedf people should be roughly the same as the
+    # The number of infected people should be roughly the same as the
     # infection rate of the virus.
+    people = []
+    for i in range(0, 100):
+        person = Person(i, False, virus)
+        people.append(person)
+        
+    infected = []
+    not_infected = []
+    
+    for person in people:
+        random_number = random.random()
+        if random_number < virus.repro_rate:
+            person.infection = virus
+            infected.append(person)
+        else:
+            not_infected.append(person)
+            
+    print(f"Infection Rate {len(infected) / num_people}")
+    print(f"The theoretical infection rate is 0.70")
