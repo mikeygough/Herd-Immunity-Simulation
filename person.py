@@ -6,12 +6,12 @@ from virus import Virus
 
 class Person(object):
     # Define a person.
-    def __init__(self, _id, is_vaccinated, is_alive=True, infection=None):
+    def __init__(self, _id, is_vaccinated, infection=None, is_alive=True):
         # A person has an id, is_vaccinated and possibly an infection
         self._id = _id  # int
-        self.is_vacinated = is_vaccinated
-        self.is_alive = is_alive
+        self.is_vaccinated = is_vaccinated
         self.infection = infection
+        self.is_alive = is_alive
 
     def did_survive_infection(self):
         # This method checks if a person survived an infection.
@@ -28,7 +28,7 @@ class Person(object):
                 self.is_alive = False
                 return False
             else:
-                self.is_vacinated = True
+                self.is_vaccinated = True
                 return True
 
 
@@ -44,7 +44,7 @@ if __name__ == "__main__":
     unvaccinated_person = Person(2, False)
     assert unvaccinated_person._id == 2
     assert unvaccinated_person.is_alive is True
-    assert unvaccinated_person.is_vacinated is False
+    assert unvaccinated_person.is_vaccinated is False
     assert unvaccinated_person.infection is None
 
     # Test an infected person. An infected person has an infection/virus
@@ -52,36 +52,41 @@ if __name__ == "__main__":
     virus = Virus("Dysentery", 0.7, 0.2)
     # Create a Person object and give them the virus infection
     infected_person = Person(3, False, virus)
-    # TODO: complete your own assert statements that test
-    # the values of each attribute
-    # assert ...
+    assert infected_person._id == 3
+    assert infected_person.is_alive is True
+    assert infected_person.is_vaccinated is False
+    assert infected_person.infection is virus
 
     # You need to check the survival of an infected person. Since the chance
     # of survival is random you need to check a group of people.
     # Create a list to hold 100 people. Use the loop below to make 100 people
+    num_people = 100
     people = []
-    for i in range(1, 100):
-        # TODO Make a person with an infection
-        # TODO Append the person to the people list
-        pass
+    for i in range(0, 100):
+        person = Person(i, False, virus)
+        people.append(person)
 
     # Now that you have a list of 100 people. Resolve whether the Person
     # survives the infection or not by looping over the people list.
 
-    # for person in people:
-    #     # For each person call that person's did_survive_infection method
-    #     survived = person.did_survive_infection()
+    survived = []
+    not_survived = []
+    
+    for person in people:
+        if person.did_survive_infection():
+            survived.append(person)
+        else:
+            not_survived.append(person)
 
     # Count the people that survived and did not survive:
 
-    # did_survived = 0
-    # did_not_survive = 0
+    did_survived = len(survived)
+    did_not_survive = len(not_survived)
+    
+    print(f"Survival Rate {did_survived / num_people}")
+    print(f"Mortality Rate {did_not_survive / num_people}")
+    print(f"The theoretical mortality rate is 0.20")
 
-    # TODO Loop over all of the people
-    # TODO If a person is_alive True add one to did_survive
-    # TODO If a person is_alive False add one to did_not_survive
-
-    # TODO When the loop is complete print your results.
     # The results should roughly match the mortality rate of the virus
     # For example if the mortality rate is 0.2 rough 20% of the people
     # should succumb.
