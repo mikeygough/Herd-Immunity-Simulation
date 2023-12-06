@@ -71,13 +71,13 @@ if __name__ == "__main__":
 
     survived = []
     not_survived = []
-    
+
     for person in people:
         if person.did_survive_infection():
             survived.append(person)
         else:
             not_survived.append(person)
-    
+
     print(f"Survival Rate {len(survived) / num_people}")
     print(f"Mortality Rate {len(not_survived) / num_people}")
     print(f"The theoretical mortality rate is 0.20")
@@ -87,7 +87,7 @@ if __name__ == "__main__":
     # should succumb.
 
     # Stretch challenge!
-    
+
     # Check the infection rate of the virus by making a group of
     # unifected people. Loop over all of your people.
     # Generate a random number. If that number is less than the
@@ -101,10 +101,10 @@ if __name__ == "__main__":
     for i in range(0, 100):
         person = Person(i, False, virus)
         people.append(person)
-        
+
     infected = []
     not_infected = []
-    
+
     for person in people:
         random_number = random.random()
         if random_number < virus.repro_rate:
@@ -112,6 +112,6 @@ if __name__ == "__main__":
             infected.append(person)
         else:
             not_infected.append(person)
-            
+
     print(f"Infection Rate {len(infected) / num_people}")
     print(f"The theoretical infection rate is 0.70")
