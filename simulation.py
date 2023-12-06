@@ -190,7 +190,7 @@ class Simulation(object):
 
 if __name__ == "__main__":
     # Test your simulation here
-    virus_name = "Covid-19"
+    virus_name = "Bed Rot"
     repro_num = 0.60
     mortality_rate = 0.20
     virus = Virus(virus_name, repro_num, mortality_rate)
@@ -200,8 +200,6 @@ if __name__ == "__main__":
     initially_vaccinated = int(pop_size * 0.05)
     initially_infected = 10
 
-    # Make a new instance of the imulation
-    # virus = Virus(virus, pop_size, vacc_percentage, initially_infected)
     sim = Simulation(virus, pop_size, initially_vaccinated, initially_infected)
 
     sim.run()

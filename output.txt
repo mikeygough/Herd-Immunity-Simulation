@@ -1,41 +1,27 @@
  ===============
-Population Size: 100000
-Virus Name: Covid-19
-Initially Infected: 10
-Initially Vaccinated: 5000
+Population Size: 1000
+Virus Name: Bed Rot
+Initially Infected: 5
+Initially Vaccinated: 50
  ===============
 
 Step Counter: 1
-New Deaths: 123
-New Vaccinations: 430
-Total Simulation Deaths: 123
-Total Simulation Vaccinations (Starting + New): 5440
+New Deaths: 40
+New Vaccinations: 212
+Total Simulation Deaths: 40
+Total Simulation Vaccinations (Starting + New): 267
  ===============
 
 Step Counter: 2
-New Deaths: 4521
-New Vaccinations: 17351
-Total Simulation Deaths: 4644
-Total Simulation Vaccinations (Starting + New): 22791
+New Deaths: 130
+New Vaccinations: 563
+Total Simulation Deaths: 170
+Total Simulation Vaccinations (Starting + New): 830
  ===============
 
-Step Counter: 3
-New Deaths: 14822
-New Vaccinations: 57742
-Total Simulation Deaths: 19466
-Total Simulation Vaccinations (Starting + New): 80533
- ===============
-
-Step Counter: 4
-New Deaths: 0
-New Vaccinations: 1
-Total Simulation Deaths: 19466
-Total Simulation Vaccinations (Starting + New): 80534
- ===============
-
-Population Size: 100000
-Initially Infected: 10
-Initially Vaccinated: 5000
-Total Simulation Deaths: 19466
-Total Simulation Vaccinations: 80534
+Population Size: 1000
+Initially Infected: 5
+Initially Vaccinated: 50
+Total Simulation Deaths: 170
+Total Simulation Vaccinations: 830
  ===============
