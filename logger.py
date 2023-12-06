@@ -34,7 +34,7 @@ Newly Infected During this Round: {newly_infected}
             f.write(formatted_string)    
     
     def log_infection_survival(
-        self, pop_size, initially_infected, initially_vaccinated, total_deaths, total_vaccinations
+        self, pop_size, initially_infected, initially_vaccinated, total_deaths, total_vaccinations, saved_by_vaccination
     ):
         formatted_string = f"""
 Population Size: {pop_size}
@@ -42,6 +42,7 @@ Initially Infected: {initially_infected}
 Initially Vaccinated: {initially_vaccinated}
 Total Simulation Deaths: {total_deaths}
 Total Simulation Vaccinations: {total_vaccinations}
+Potentially Saved from Infection via Vaccination: {saved_by_vaccination}
  ===============
 """
         with open(self.file_name, "a") as f:

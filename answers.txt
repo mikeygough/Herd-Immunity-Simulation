@@ -1,0 +1,21 @@
+1. What were the inputs you gave the simulation? (Population size, percent vaccinated, virus name, mortality rate, reproductive rate)
+Here is the virus information:
+
+virus_name = "Bed Rot"
+repro_num = 0.60
+mortality_rate = 0.20
+
+Here is the simulation information:
+
+pop_size = 100000
+initially_vaccinated = 5000 -> 5% of the population
+initially_infected = 10
+
+2. What percentage of the population became infected at some point before the virus burned out?
+100% of the population became infected at some point... My simulation ends when the sum of people dead + the sum of people living and vaccinated equals the population size.
+
+3. What percentage of the population died from the virus?
+18.87% of the population died from the virus. This is inline with the theoretical mortality rate of 20%.
+
+4. Out of all interactions sick individuals had during the entire simulation, how many times, in total, did a vaccination save someone from potentially becoming infected?
+8074019 times an individual was potentially saved from an infection because they had a vaccination

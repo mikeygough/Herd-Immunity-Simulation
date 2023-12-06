@@ -1,6 +1,6 @@
 import random, sys
 
-# random.seed(42)
+random.seed(42)
 from person import Person
 from logger import Logger
 from virus import Virus
@@ -21,6 +21,7 @@ class Simulation(object):
         self.new_vaccinations = 0
         self.total_deaths = []
         self.total_vaccinations = [initially_vaccinated + initially_infected] # include starting vaccinations
+        self.saved_by_vaccination = 0
     
     def _create_population(self):
         ''' create a list of people (Person instances) of length self.pop_size
@@ -96,7 +97,8 @@ class Simulation(object):
             self.initially_infected,
             self.initially_vaccinated,
             sum(self.total_deaths),
-            sum(self.total_vaccinations)
+            sum(self.total_vaccinations),
+            self.saved_by_vaccination
         )
         
     def time_step(self):
@@ -143,6 +145,10 @@ class Simulation(object):
 
         # set new_infection to False (for logging)
         new_infection = False
+        
+        # if already vaccinated
+        if random_person.is_vaccinated:
+            self.saved_by_vaccination += 1
         
         # if not infected and not vaccinated
         if not random_person.infection and not random_person.is_vaccinated:

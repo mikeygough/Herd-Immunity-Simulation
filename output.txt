@@ -1,27 +1,42 @@
  ===============
-Population Size: 1000
+Population Size: 100000
 Virus Name: Bed Rot
-Initially Infected: 5
-Initially Vaccinated: 50
+Initially Infected: 10
+Initially Vaccinated: 5000
  ===============
 
 Step Counter: 1
-New Deaths: 40
-New Vaccinations: 212
-Total Simulation Deaths: 40
-Total Simulation Vaccinations (Starting + New): 267
+New Deaths: 111
+New Vaccinations: 450
+Total Simulation Deaths: 111
+Total Simulation Vaccinations (Starting + New): 5460
  ===============
 
 Step Counter: 2
-New Deaths: 130
-New Vaccinations: 563
-Total Simulation Deaths: 170
-Total Simulation Vaccinations (Starting + New): 830
+New Deaths: 4567
+New Vaccinations: 18130
+Total Simulation Deaths: 4678
+Total Simulation Vaccinations (Starting + New): 23590
  ===============
 
-Population Size: 1000
-Initially Infected: 5
-Initially Vaccinated: 50
-Total Simulation Deaths: 170
-Total Simulation Vaccinations: 830
+Step Counter: 3
+New Deaths: 14209
+New Vaccinations: 57522
+Total Simulation Deaths: 18887
+Total Simulation Vaccinations (Starting + New): 81112
+ ===============
+
+Step Counter: 4
+New Deaths: 0
+New Vaccinations: 1
+Total Simulation Deaths: 18887
+Total Simulation Vaccinations (Starting + New): 81113
+ ===============
+
+Population Size: 100000
+Initially Infected: 10
+Initially Vaccinated: 5000
+Total Simulation Deaths: 18887
+Total Simulation Vaccinations: 81113
+Potentially Saved from Infection via Vaccination: 8074019
  ===============
